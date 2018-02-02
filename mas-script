@@ -1,2 +1,7 @@
 #!/bin/bash
+# get rid of comment lines
+#grep means search for word, case insensitive in this case, only
+# translate spaces into new lines
+# search for word (case insensitive, whole words only)
+# word count by line to get total number of occurences
 grep -v"^#" $2 | grep -i -w $1 | tr ' ' '\n' | grep -i -w  $1 | wc -l
